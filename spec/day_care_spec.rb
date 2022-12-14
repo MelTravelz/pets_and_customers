@@ -4,8 +4,10 @@ require './lib/day_care'
 
 RSpec.describe DayCare do
     let(:day_care) {DayCare.new("Pet Kare")}
+
     let(:jill) {Customer.new("Jill", 1)}
     let(:joel) {Customer.new("Joel", 2)}
+    
     let(:samson) {Pet.new({name: "Samson", type: :dog, age: 3})}
     let(:lucy) {Pet.new({name: "Lucy", type: :cat, age: 12})}
     let(:max) {Pet.new({name: "Max", type: :cat, age: 5})}
@@ -43,16 +45,16 @@ RSpec.describe DayCare do
         end
         
         it "list all unfed pets"do
-        jill.adopt(max)
-        joel.adopt(lucy)
-        joel.adopt(samson)
-        
-        day_care.add_customer(jill)
-        day_care.add_customer(joel)
+            jill.adopt(max)
+            joel.adopt(lucy)
+            joel.adopt(samson)
+            
+            day_care.add_customer(jill)
+            day_care.add_customer(joel)
 
-        lucy.feed
+            lucy.feed
 
-        expect(day_care.list_all_unfed_pets).to eq([max, samson])
+            expect(day_care.list_all_unfed_pets).to eq([max, samson])
         end
     end
 

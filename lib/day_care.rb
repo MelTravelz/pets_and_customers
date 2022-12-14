@@ -27,6 +27,7 @@ class DayCare
             end
         end.flatten
     end
+    
         #OPTION 2
     #   @customer.map do |customer|
     #     customer.pets.select do |pet|

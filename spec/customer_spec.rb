@@ -22,9 +22,9 @@ RSpec.describe Customer do
   end
 
   it "can adopt new pets" do
-
     @joel.adopt(samson)
     @joel.adopt(lucy)
+    
     expect(@joel.pets).to eq([samson, lucy])
   end
 

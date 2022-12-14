@@ -12,6 +12,7 @@ RSpec.describe Pet do
   it "has attributes" do
     expect(@samson.name).to eq("Samson")
     expect(@samson.type).to eq(:dog)
+    expect(@samson.age).to eq(3)
   end
 
   it "is not fed by default" do
