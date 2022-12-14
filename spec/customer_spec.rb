@@ -4,6 +4,9 @@ require './lib/pet'
 RSpec.describe Customer do
   before(:each) do
     @joel = Customer.new("Joel", 2)
+    @samson = Pet.new({name: "Samson", type: :dog})
+    @lucy = Pet.new({name: "Lucy", type: :cat})
+
   end
 
   it "exists" do
@@ -20,8 +23,6 @@ RSpec.describe Customer do
   end
 
   it "can adopt new pets" do
-    samson = Pet.new({name: "Samson", type: :dog})
-    lucy = Pet.new({name: "Lucy", type: :cat})
 
     @joel.adopt(samson)
     @joel.adopt(lucy)
