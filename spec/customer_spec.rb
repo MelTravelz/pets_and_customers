@@ -6,7 +6,6 @@ RSpec.describe Customer do
     @joel = Customer.new("Joel", 2)
     @samson = Pet.new({name: "Samson", type: :dog})
     @lucy = Pet.new({name: "Lucy", type: :cat})
-
   end
 
   it "exists" do

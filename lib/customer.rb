@@ -13,7 +13,7 @@ class Customer
     @pets.push(pet)
   end
 
-  def charge(amout)
+  def charge(amount)
     @outstanding_balance += amount
   end
 

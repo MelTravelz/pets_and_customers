@@ -6,6 +6,7 @@ class Pet
     @type = info[:type]
     @age = info[:age]
     @fed = false
+  end
 
     def fed?
       @fed
