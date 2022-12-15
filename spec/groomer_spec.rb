@@ -50,7 +50,7 @@ RSpec.describe Groomer do
 
             joel.charge(120)
 
-            expect(groomer.with_outst_bal).to eq([joel])
+            expect(groomer.customers_with_outstanding_balance).to eq([joel])
         end
 
         it "can count # of pets of a given type" do
@@ -69,8 +69,32 @@ RSpec.describe Groomer do
 
 
 
-    # describe "Iteration 4" do
-    # end
+    describe "Iteration 4" do
+
+        it "groomer can groom a dog" do
+            jill.adopt(max)
+            joel.adopt(lucy)
+            joel.adopt(samson)
+            
+            groomer.add_customer(jill)
+            groomer.add_customer(joel)
+
+            groomer.groom("hair cut", samson)
+
+            groom_info = {
+                which_service:"hair cut",
+                customer: "Joel",
+                pet: "Samson",
+                price_of_service: 60,
+            }
+
+            expect(groomer.track_info(samson)).to eq(groom_info)
+        end
+
+
+
+
+    end
 
 end
 

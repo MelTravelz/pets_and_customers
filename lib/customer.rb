@@ -7,6 +7,7 @@ class Customer
         @id = id
         @pets = []
         @outstanding_balance = 0
+        @charges = []
   end
 
   def adopt(pet)
